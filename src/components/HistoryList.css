@@ -1,0 +1,202 @@
+.history-list {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #e1e5e9;
+}
+
+.history-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.history-empty {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.history-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.history-item:hover {
+  background-color: #f9fafb;
+}
+
+.history-city-button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.history-city-button:hover {
+  background-color: #f3f4f6;
+}
+
+.history-city-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+.city-name {
+  font-weight: 500;
+}
+
+.delete-button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.clear-history-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clear-history-button:hover {
+  background-color: #4b5563;
+}
+
+.clear-history-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2);
+}
+
+/* Scrollbar styling for history items */
+.history-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.history-items::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.history-items::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.history-items::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .history-list {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .history-title {
+    font-size: 1.1rem;
+  }
+
+  .history-city-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .delete-button {
+    padding: 0.5rem 0.4rem;
+    font-size: 1.1rem;
+    min-width: 36px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .history-list {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+  }
+
+  .history-title {
+    color: #f9fafb;
+  }
+
+  .history-empty {
+    color: #9ca3af;
+  }
+
+  .history-item:hover {
+    background-color: #374151;
+  }
+
+  .history-city-button {
+    color: #f9fafb;
+  }
+
+  .history-city-button:hover {
+    background-color: #374151;
+  }
+
+  .history-items::-webkit-scrollbar-track {
+    background: #374151;
+  }
+
+  .history-items::-webkit-scrollbar-thumb {
+    background: #6b7280;
+  }
+
+  .history-items::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+} 
