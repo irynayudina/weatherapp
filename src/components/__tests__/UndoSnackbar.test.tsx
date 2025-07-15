@@ -379,7 +379,7 @@ describe('UndoSnackbar', () => {
   });
 
   it('stops progress bar updates when not visible', () => {
-    const { rerender } = render(
+    render(
       <UndoSnackbar
         message="Test message"
         onUndo={mockOnUndo}

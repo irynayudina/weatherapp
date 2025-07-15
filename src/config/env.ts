@@ -3,10 +3,15 @@
  * All environment variables are prefixed with VITE_ for Vite compatibility
  */
 
+// Type for Vite's import.meta.env
+interface ImportMetaEnv {
+  [key: string]: string | boolean | undefined;
+}
+
 // Helper function to safely get environment variables
 function getEnvVar(key: string, defaultValue: string = ''): string {
   try {
-    return (import.meta.env as any)[key] || defaultValue;
+    return (import.meta.env as ImportMetaEnv)[key] as string || defaultValue;
   } catch {
     return defaultValue;
   }
@@ -80,7 +85,7 @@ export function getConfig<T extends keyof Config>(key: T): Config[T] {
  */
 export function isDevelopment(): boolean {
   try {
-    return config.dev.mode || (import.meta.env as any).DEV === true;
+    return config.dev.mode || (import.meta.env as ImportMetaEnv).DEV === true;
   } catch {
     return config.dev.mode;
   }
@@ -91,7 +96,7 @@ export function isDevelopment(): boolean {
  */
 export function shouldEnableDevtools(): boolean {
   try {
-    return config.dev.enableDevtools && (isDevelopment() || (import.meta.env as any).DEV === true);
+    return config.dev.enableDevtools && (isDevelopment() || (import.meta.env as ImportMetaEnv).DEV === true);
   } catch {
     return config.dev.enableDevtools && isDevelopment();
   }

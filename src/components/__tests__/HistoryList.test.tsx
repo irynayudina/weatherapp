@@ -53,7 +53,7 @@ jest.mock('../../store/hooks', () => ({
 
 describe('HistoryList', () => {
   const mockOnCitySelect = jest.fn();
-  const { useAppSelector } = require('../../store/hooks');
+  const { useAppSelector } = jest.requireMock('../../store/hooks');
 
   beforeEach(() => {
     mockOnCitySelect.mockClear();
