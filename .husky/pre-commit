@@ -1,0 +1,5 @@
+echo "🔍 Running pre-commit checks..."
+echo "Linting...
+npm run lint
+echo "testing the components and integration"
+npm run test
