@@ -1,69 +1,70 @@
 .history-list {
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #e1e5e9;
+  border: 1px solid #81d4fa;
 }
 
 .history-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #374151;
-  margin: 0 0 1rem 0;
+  color: #263238;
+  margin: 0 0 0.75rem 0;
   text-align: center;
 }
 
 .history-empty {
   text-align: center;
-  color: #6b7280;
+  color: #90a4ae;
   font-style: italic;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
 }
 
 .history-items {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
-  max-height: 300px;
+  margin: 0 0 0.75rem 0;
+  max-height: 250px;
   overflow-y: auto;
 }
 
 .history-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }
 
 .history-item:hover {
-  background-color: #f9fafb;
+  background-color: #e0f7fa;
 }
 
 .history-city-button {
   flex: 1;
   background: none;
   border: none;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   text-align: left;
   cursor: pointer;
   border-radius: 8px 0 0 8px;
   transition: background-color 0.2s ease;
-  font-size: 1rem;
-  color: #374151;
+  font-size: 0.85rem;
+  color: #263238;
 }
 
 .history-city-button:hover {
-  background-color: #f3f4f6;
+  background-color: #e0f7fa;
 }
 
 .history-city-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
 }
 
 .city-name {
@@ -71,132 +72,92 @@
 }
 
 .delete-button {
-  background: #ef4444;
-  color: white;
+  background: #ffca28;
+  color: #263238;
   border: none;
-  padding: 0.75rem 0.5rem;
+  padding: 0.5rem 0.4rem;
   cursor: pointer;
   border-radius: 0 8px 8px 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1;
   transition: background-color 0.2s ease;
-  min-width: 40px;
+  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .delete-button:hover {
-  background-color: #dc2626;
+  background-color: #ffb300;
 }
 
 .delete-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 202, 40, 0.2);
 }
 
 .clear-history-button {
   width: 100%;
-  padding: 0.75rem 1rem;
-  background-color: #6b7280;
+  padding: 0.5rem 0.75rem;
+  background-color: #90a4ae;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .clear-history-button:hover {
-  background-color: #4b5563;
+  background-color: #78909c;
 }
 
 .clear-history-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2);
+  box-shadow: 0 0 0 3px rgba(144, 164, 174, 0.2);
 }
 
 /* Scrollbar styling for history items */
 .history-items::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .history-items::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 3px;
+  background: #e0f7fa;
+  border-radius: 2px;
 }
 
 .history-items::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+  background: #81d4fa;
+  border-radius: 2px;
 }
 
 .history-items::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #0288d1;
 }
 
 /* Responsive design */
 @media (max-width: 480px) {
   .history-list {
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.75rem;
+    border-radius: 12px;
+    max-width: 300px;
   }
 
   .history-title {
-    font-size: 1.1rem;
-  }
-
-  .history-city-button {
-    padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
   }
 
-  .delete-button {
-    padding: 0.5rem 0.4rem;
-    font-size: 1.1rem;
-    min-width: 36px;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .history-list {
-    background: #1f2937;
-    border-color: #374151;
-    color: #f9fafb;
-  }
-
-  .history-title {
-    color: #f9fafb;
-  }
-
-  .history-empty {
-    color: #9ca3af;
-  }
-
-  .history-item:hover {
-    background-color: #374151;
-  }
-
   .history-city-button {
-    color: #f9fafb;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
   }
 
-  .history-city-button:hover {
-    background-color: #374151;
-  }
-
-  .history-items::-webkit-scrollbar-track {
-    background: #374151;
-  }
-
-  .history-items::-webkit-scrollbar-thumb {
-    background: #6b7280;
-  }
-
-  .history-items::-webkit-scrollbar-thumb:hover {
-    background: #9ca3af;
+  .delete-button {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.9rem;
+    min-width: 28px;
   }
 } 
