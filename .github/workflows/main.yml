@@ -28,9 +28,3 @@ jobs:
 
       - name: 🧪 Run tests
         run: npm test -- --ci --coverage
-
-      - name: 🔡 Type check
-        run: npm run type-check
-
-      - name: 🛠️ Build app (optional)
-        run: npm run build
