@@ -1,4 +1,4 @@
-import type { CurrentWeatherResponse } from '../types/weather';
+import type { CurrentWeatherResponse } from '../../types/weather';
 import './WeatherCard.css';
 
 interface WeatherCardProps {

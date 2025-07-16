@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import WeatherCard from '../WeatherCard';
+import WeatherCard from '../WeatherCard/WeatherCard';
 import type { CurrentWeatherResponse } from '../../types/weather';
 import '@testing-library/jest-dom';
 

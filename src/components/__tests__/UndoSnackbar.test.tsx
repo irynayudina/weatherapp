@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import UndoSnackbar from '../UndoSnackbar';
+import UndoSnackbar from '../UndoSnackbar/UndoSnackbar';
 import '@testing-library/jest-dom';
 
 

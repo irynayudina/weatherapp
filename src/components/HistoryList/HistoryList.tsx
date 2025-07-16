@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import UndoSnackbar from './UndoSnackbar';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { addCity, removeCity, clearHistory, loadHistoryFromStorage, insertCityAtIndex } from '../store/slices/historySlice';
-import { selectHistory } from '../store/slices/historySlice';
+import UndoSnackbar from '../UndoSnackbar/UndoSnackbar';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { addCity, removeCity, clearHistory, loadHistoryFromStorage, insertCityAtIndex } from '../../store/slices/historySlice';
+import { selectHistory } from '../../store/slices/historySlice';
 import './HistoryList.css';
 
 interface HistoryListProps {

@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import HistoryList from '../HistoryList';
+import HistoryList from '../HistoryList/HistoryList';
 import '@testing-library/jest-dom';
 
 // Mock the config module to avoid import.meta issues
